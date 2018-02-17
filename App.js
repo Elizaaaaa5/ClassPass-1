@@ -9,7 +9,6 @@ import Profile from './components/Profile.js';
 export default class App extends Component {
   render() {
     const MainNavigator = TabNavigator({
-      //<Image source={require('./glyph/search.png')} />: { screen: Explore},
       Explore: { screen: Explore},
       Chat:    { screen: Chat},
       Profile: { screen: Profile},
