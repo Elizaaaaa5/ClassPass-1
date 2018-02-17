@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { SearchBar } from 'react-native-elements';
 
 export default class Explore extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <SearchBar 
+          
+        />
         <Text>Welcome to ClassPass!</Text>
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
