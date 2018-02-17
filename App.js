@@ -9,9 +9,10 @@ import Profile from './components/Profile.js';
 export default class App extends Component {
   render() {
     const MainNavigator = TabNavigator({
-      Profile: { screen: Profile},
+      //<Image source={require('./glyph/search.png')} />: { screen: Explore},
+      Explore: { screen: Explore},
       Chat:    { screen: Chat},
-      Explore: { screen: Explore}
+      Profile: { screen: Profile},
     }, {
       tabBarOptions: {
         style: {
