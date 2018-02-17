@@ -12,6 +12,12 @@ export default class App extends Component {
       Profile: { screen: Profile},
       Chat:    { screen: Chat},
       Explore: { screen: Explore}
+    }, {
+      tabBarOptions: {
+        style: {
+          backgroundColor: '#1a1a1c',
+        }
+      }
     });
     return (
 //      <View style={styles.container}>
