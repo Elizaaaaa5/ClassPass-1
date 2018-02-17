@@ -5,9 +5,6 @@ export default class Tutor extends Component {
   render() {
       return (
       <View style={styles.container}>
-        <SearchBar style={styles.searchbar} 
-          placeholder='Search for tutors...'/>  
-        
         <Text>Welcome to ClassPass!</Text>
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>

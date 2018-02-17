@@ -1,51 +1,14 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { TabNavigator, TabBarTop } from 'react-navigation';
-import { SearchBar } from 'react-native-elements';
+//import { SearchBar } from 'react-native-elements';
 import Tutor from './Tutor.js';
 import Tutee from './Tutee.js';
 
 export default class Explore extends Component {
   render() {
-    const exploreTabs =(props, alignSelf, marginTop)=> ({
-      fontSize: 13,
-      fontWeight: '600',
-      marginHorizontal: 15,
-      marginTop,
-      alignSelf
-    });
-    const indication =(props,alignSelf)=> ({
-      backgroundColor: props.activeTintColor,
-      alignSelf: 'flex-end',
-    });
-    const TutorTabs = TabNavigator({
-      Tutor: {
-        screen: Tutor,
-        navigationOptions:{
-          tabBarLabel: (props)=>(<Text style={exploreTabs(props, 'flex-end',30)}> Tutor</Text>)
-        },  
-      },
-      Tutee: {
-        screen: Tutee,
-        navigationOptions:{
-          tabBarLabel: (props)=>(<Text style={exploreTabs(props, 'flex-start',30)}> Tutee</Text>)
-        },
-      },
-    }, {
-      tabBarComponent: (props)=> <TabBarTop {...props} indication={indication(props, 'flex-end')} />,
-      tabBarPosition: 'top',
-      animationEnabled: true,
-      tabBarOptions: {
-        activeTintColor: '#20b2aa',
-        style: {
-          backgroundColor: '#fff',
-        },
-      }
-    });
     return (
       <View style={styles.container}>
-        <SearchBar style={styles.searchbar} 
-          placeholder='Search for tutors...'/>  
         <Text>hello </Text>
         <Text>bitch </Text>
         <Text>! </Text>
