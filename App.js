@@ -10,8 +10,9 @@ export default class App extends Component {
   render() {
     const MainNavigator = TabNavigator({
       //<Image source={require('./glyph/search.png')} />: { screen: Explore},
-      Explore: { screen: Explore},
       Chat:    { screen: Chat},
+      Explore: { screen: Explore},
+      
       Profile: { screen: Profile},
     }, {
       tabBarOptions: {
@@ -26,7 +27,7 @@ export default class App extends Component {
 //        <Text>Changes you make will automatically reload.</Text>
 //        <Text>Shake your phone to open the developer menu.</Text>
 //      </View>
-        <MainNavigator />  
+        <MainNavigator />
     );
   }
 }
