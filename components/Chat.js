@@ -8,14 +8,17 @@ import { List, ListItem } from 'react-native-elements';
 
 export default class Chat extends Component {
 
-
+  meme() {
+    var x = 1;
+    x++;
+  }
 
   render() {
     return (
       <View style={styles.container}>
         <SearchBar
-          onChangeText={}
-          onClearText={}
+          onChangeText={meme}
+          onClearText={meme}
           placeholder='Type Here...' />
       </View>
     );
