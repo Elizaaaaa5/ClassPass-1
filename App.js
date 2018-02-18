@@ -6,7 +6,6 @@ import Chat from './components/Chat.js';
 import Profile from './components/Profile.js';
 import Tutor from './components/Tutor.js';
 import Tutee from './components/Tutee.js';
-import Icon from 'react-native-vector-iconsi/FontAwesome';
 
 export default class App extends Component {
   render() {
