@@ -5,7 +5,7 @@ export default class Chat extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Welcome to ClassPass!</Text>
+        <Text>Welcome to Chat Tab!</Text>
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
       </View>
