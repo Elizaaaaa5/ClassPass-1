@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
-
-export default class Chat extends Component {
   const list = [
   {
     name: 'Amy Farha',
@@ -16,6 +14,9 @@ export default class Chat extends Component {
   }
    // more items
 ];
+
+
+export default class Chat extends Component {
 
 renderRow (rowData, sectionID) {
   return (
