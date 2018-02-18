@@ -1,6 +1,9 @@
 import { List, ListItem } from 'react-native-elements'
 
-const list = [
+
+export default class Profile extends Component {
+
+  const list = [
   {
     name: 'Amy Farha',
     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
@@ -35,4 +38,5 @@ render () {
       />
     </List>
   )
+}
 }
