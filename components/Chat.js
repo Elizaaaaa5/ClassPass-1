@@ -4,15 +4,44 @@ import { List, ListItem } from 'react-native-elements';
 
 
 export default class Chat extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Welcome to Chat Tab!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
+  const list = [
+  {
+    name: 'Amy Farha',
+    subtitle: 'Vice President'
+  },
+  {
+    name: 'Chris Jackson',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    subtitle: 'Vice Chairman'
   }
+   // more items
+];
+
+renderRow (rowData, sectionID) {
+  return (
+    <ListItem
+      avatar={<Avatar
+                rounded
+                source={rowData.avatar_url && {uri: rowData.avatar_url}}
+                title={rowData.name[0]}
+              />}
+      key={sectionID}
+      title={rowData.name}
+      subtitle={rowData.subtitle}
+    />
+  );
+}
+
+render () {
+  return (
+    <List>
+      <ListView
+        renderRow={this.renderRow}
+        dataSource={this.state.dataSource}
+      />
+    </List>
+  );
+}
 }
 
 const styles = StyleSheet.create({
