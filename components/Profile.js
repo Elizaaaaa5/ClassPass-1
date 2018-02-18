@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
-
-import ProfileScreen1 from './profile/screen1';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default class Profile extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <ProfileScreen1 />
+        <Text>Welcome to Profile Tab!</Text>
+        <Text>Changes you make will automatically reload.</Text>
+        <Text>Shake your phone to open the developer menu.</Text>
       </View>
     );
   }
@@ -16,6 +16,8 @@ export default class Profile extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black'
-  }
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
