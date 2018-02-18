@@ -14,15 +14,25 @@ const list = [
   ... // more items
 ]
 
-<List containerStyle={{marginBottom: 20}}>
-  {
-    list.map((l, i) => (
-      <ListItem
-        roundAvatar
-        avatar={{uri:l.avatar_url}}
-        key={i}
-        title={l.name}
+renderRow (rowData, sectionID) {
+  return (
+    <ListItem
+      roundAvatar
+      key={sectionID}
+      title={rowData.name}
+      subtitle={rowData.subtitle}
+      avatar={{uri:rowData.avatar_url}}
+    />
+  )
+}
+
+render () {
+  return (
+    <List>
+      <ListView
+        renderRow={this.renderRow}
+        dataSource={this.state.dataSource}
       />
-    ))
-  }
-</List>
+    </List>
+  )
+}
