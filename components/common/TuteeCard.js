@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import { View, StyleSheet, Text, Image, ScrollView } from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 
 export default class TuteeCard extends Component {
   render () {
     return (
       <View style={{backgroundColor: '#000000'}}>
-          <List>
+        <ScrollView>
+          <List containerStyle={{marginTop: 0}}>
             <ListItem
               containerStyle={{backgroundColor: '#1a1a1c'}}
               roundAvatar
@@ -63,7 +64,8 @@ export default class TuteeCard extends Component {
             avatar={require('../../images/avatar1.png')}
             rightTitle='$15/hr'
           />
-        </List>
+         </List>
+        </ScrollView>
       </View>
     );
   }

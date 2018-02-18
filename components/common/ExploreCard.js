@@ -6,7 +6,7 @@ export default class ExploreCard extends Component {
   render () {
     return (
       <View style={{backgroundColor: '#000000'}}>
-          <List>
+          <List containerStyle={{marginTop: 0}}>
             <ListItem
               containerStyle={{backgroundColor: '#1a1a1c'}}
               roundAvatar
