@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { SearchBar } from 'react-navigation';
 
 export default class Tutor extends Component {
   render() {

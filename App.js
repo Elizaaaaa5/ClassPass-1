@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { TabNavigator, TabBarTop } from 'react-navigation';
+import { StackNavigator, TabNavigator, TabBarTop } from 'react-navigation';
 //import Explore from './components/Explore.js';
 import Chat from './components/Chat.js';
 import Profile from './components/Profile.js';
@@ -39,13 +39,13 @@ export default class App extends Component {
       tabBarPosition: 'top',
       animationEnabled: true,
       tabBarOptions: {
-        activeTintColor: '#20b2aa',
+        activeTintColor: '#fff',
         style: {
           backgroundColor: '#fff',
         },
       }
     });
-
+    
     const MainNavigator = TabNavigator({
       Explore: { screen: TutorTabs},
       Chat:    { screen: Chat},
