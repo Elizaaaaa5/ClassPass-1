@@ -2,69 +2,99 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text, Image, ScrollView } from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 
+const list = [
+  {
+    name: 'Bugi Abdulkarim',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    course: 'CS 2150',
+    rating: '../../glyph/ratings/3star.png'
+  },
+  {
+    name: 'Bugi Abdulkarim',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    course: 'CS 2150',
+    rating: '../../glyph/ratings/3star.png'
+  },
+  {
+    name: 'Bugi Abdulkarim',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    course: 'CS 2150',
+    rating: '../../glyph/ratings/3star.png'
+  },
+  {
+    name: 'Bugi Abdulkarim',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    course: 'CS 2150',
+    rightTitle: '$9/hr',
+    rating: '../../glyph/ratings/3star.png'
+  },
+  {
+    name: 'Bugi Abdulkarim',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    course: 'CS 2150',
+    rating: '../../glyph/ratings/3star.png'
+  },
+  {
+    name: 'Bugi Abdulkarim',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    course: 'CS 2150',
+    rating: '../../glyph/ratings/3star.png'
+  },
+  {
+    name: 'Bugi Abdulkarim',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    course: 'CS 2150',
+    rating: '../../glyph/ratings/3star.png'
+  },
+  {
+    name: 'Bugi Abdulkarim',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    course: 'CS 2150',
+    rating: '../../glyph/ratings/3star.png'
+  },
+  {
+    name: 'Bugi Abdulkarim',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    course: 'CS 2150',
+    rating: '../../glyph/ratings/3star.png'
+  },
+  {
+    name: 'Bugi Abdulkarim',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    course: 'CS 2150',
+    rating: '../../glyph/ratings/3star.png'
+  },
+  {
+    name: 'Bugi Abdulkarim',
+    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+    course: 'CS 2150',
+    rating: '../../glyph/ratings/3star.png'
+  },
+  
+];
+
+
 export default class TuteeCard extends Component {
   render () {
     return (
-      <View style={{backgroundColor: '#000000'}}>
+      <View>
         <ScrollView>
-          <List containerStyle={{marginTop: 0}}>
-            <ListItem
-              containerStyle={{backgroundColor: '#1a1a1c'}}
-              roundAvatar
-              title='Bugi'
-              titleStyle={{color: '#FFFFFF'}}
-              subtitle={
-                <View style={styles.subtitleView}>
-                  <Image source={require('../../glyph/ratings/1star.png')} style={styles.ratingImage}/>
-                  <Text style={styles.ratingText}>CS 2150</Text>
-                </View>
-              }
-              avatar={require('../../images/avatar1.png')}
-              rightTitle='$19/hr'
+          <List containerStyle={{ marginTop: 0 }}>
+            {list.map((l, i) => (
+              <ListItem
+                style={styles.cardStyle}
+                containerStyle={{backgroundColor: '#1a1a1c'}}
+                roundAvatar
+                avatar={{ uri: l.avatar_url }}
+                key={i}
+                title={l.name}
+                titleStyle={{color: '#FFFFFF'}}
+                subtitle= {l.course}
+                paddingTop={20}
+                paddingBottom={20}
               />
-            <ListItem
-              containerStyle={{backgroundColor: '#1a1a1c'}}
-              roundAvatar
-              title='Zane'
-              titleStyle={{color: '#FFFFFF'}}
-              subtitle={
-                <View style={styles.subtitleView}>
-                  <Image source={require('../../glyph/ratings/1star.png')} style={styles.ratingImage}/>
-                  <Text style={styles.ratingText}>CS 3205</Text>
-                </View>
-              }
-              avatar={require('../../images/avatar1.png')}
-              rightTitle='$9/hr'
-            />
-          <ListItem
-            containerStyle={{backgroundColor: '#1a1a1c'}}
-            roundAvatar
-            title='Jason'
-            titleStyle={{color: '#FFFFFF'}}
-            subtitle={
-              <View style={styles.subtitleView}>
-                <Image source={require('../../glyph/ratings/1star.png')} style={styles.ratingImage}/>
-                <Text style={styles.ratingText}>CS 2150</Text>
-              </View>
-            }
-            avatar={require('../../images/avatar1.png')}
-            rightTitle='$10/hr'
-            />
-          <ListItem
-            containerStyle={{backgroundColor: '#1a1a1c'}}
-            roundAvatar
-            title='Luyao'
-            titleStyle={{color: '#FFFFFF'}}
-            subtitle={
-              <View style={styles.subtitleView}>
-                <Image source={require('../../glyph/ratings/1star.png')} style={styles.ratingImage}/>
-                <Text style={styles.ratingText}>CS 2150</Text>
-              </View>
-            }
-            avatar={require('../../images/avatar1.png')}
-            rightTitle='$15/hr'
-          />
-         </List>
+            ))}
+          </List>
         </ScrollView>
       </View>
     );
@@ -77,11 +107,16 @@ styles = StyleSheet.create({
     paddingTop: 5
   },
   ratingImage: {
-    height: 19.21,
+    height: 18.21,
     width: 100
   },
   ratingText: {
-    paddingLeft: 10,
+    paddingLeft: 6,
     color: 'grey'
+  },
+  cardStyle: {
+    height: 44,
+    fontSize: 18,
+    padding: 10
   }
 })
