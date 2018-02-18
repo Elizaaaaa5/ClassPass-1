@@ -24,7 +24,7 @@ export default class Explore extends Component {
         screen: Tutor,
         navigationOptions:{
           tabBarLabel: (props)=>(<Text style={exploreTabs(props, 'flex-end',20)}> Tutor</Text>)
-        },
+        }
       },
       Tutee: {
         screen: Tutee,
@@ -40,14 +40,14 @@ export default class Explore extends Component {
         activeTintColor: '#fff',
         style: {
           //marginTop: 20,
-          backgroundColor: '#000',
+          backgroundColor: '#1a1a1c',
         },
       }
     });
      
     const ExploreNav = StackNavigator({
       StackOne: { screen: TutorTabs },
-      StackTwo: { screen: Search },
+      //StackTwo: { screen: Search },
     });
     return (
         <ExploreNav />

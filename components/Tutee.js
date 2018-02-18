@@ -5,7 +5,9 @@ import TuteeCard from './common/TuteeCard.js';
 export default class Tutee extends Component {
   render() {
     return (
-      <TuteeCard />
+      <View style={styles.container}>
+        <TuteeCard />
+      </View>
     );
   }
 }
@@ -14,6 +16,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#000000',
-      marginTop: 25,
   },
 });
