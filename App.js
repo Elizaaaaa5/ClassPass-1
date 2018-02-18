@@ -5,13 +5,12 @@ import Explore from './components/Explore.js';
 import Chat from './components/Chat.js';
 import Profile from './components/Profile.js';
 
-
 export default class App extends Component {
   render() {
     const MainNavigator = TabNavigator({
-      Profile: { screen: Profile},
+      Explore: { screen: Explore},
       Chat:    { screen: Chat},
-      Explore: { screen: Explore}
+      Profile: { screen: Profile}
     }, {
       tabBarOptions: {
         style: {
@@ -25,7 +24,7 @@ export default class App extends Component {
 //        <Text>Changes you make will automatically reload.</Text>
 //        <Text>Shake your phone to open the developer menu.</Text>
 //      </View>
-        <MainNavigator />  
+        <MainNavigator />
     );
   }
 }
