@@ -16,14 +16,27 @@ export default class Chat extends Component {
 
   render() {
     return (
+      
       <View style={styles.container}>
-        <Search />
         <SearchBar
          // onChangeText={meme()}
          // onClearText={meme()}
-          placeholder='Type Here...' />
-          
+          placeholder='Type Here...' style={styles.searchbar}/>
+          <List>
+            <ListItem
+              roundAvatar
+              title='Limited supply! Its like digital gold!'
+              subtitle={
+                <View style={styles.subtitleView}>
+                  <Image source={require('../images/rating.png')} style={styles.ratingImage}/>
+                  <Text style={styles.ratingText}>5 months ago</Text>
+                </View>
+              }
+              avatar={require('../images/avatar1.jpg')}
+            />
+          </List>
       </View>
+       
     );
   }
 }
@@ -35,4 +48,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  searchbar: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+  subtitleView: {
+    flexDirection: 'row',
+    paddingLeft: 10,
+    paddingTop: 5
+  },
+  ratingImage: {
+    height: 19.21,
+    width: 100
+  },
+  ratingText: {
+    paddingLeft: 10,
+    color: 'grey'
+  }
 });
