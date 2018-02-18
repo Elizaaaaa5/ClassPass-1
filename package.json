@@ -19,6 +19,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@expo/vector-icons": "^6.3.0",
     "expo": "^25.0.0",
     "firebase": "^4.10.0",
     "react": "16.2.0",

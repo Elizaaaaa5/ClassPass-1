@@ -47,7 +47,7 @@ export default class Explore extends Component {
      
     const ExploreNav = StackNavigator({
       StackOne: { screen: TutorTabs },
-      //StackTwo: { screen: Search },
+      StackTwo: { screen: Search },
     });
     return (
         <ExploreNav />

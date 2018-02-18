@@ -6,7 +6,7 @@ import Chat from './components/Chat.js';
 import Profile from './components/Profile.js';
 import Tutor from './components/Tutor.js';
 import Tutee from './components/Tutee.js';
-
+import Icon from 'react-native-vector-iconsi/FontAwesome';
 
 export default class App extends Component {
   render() {
@@ -22,6 +22,11 @@ export default class App extends Component {
       backgroundColor: props.activeTintColor,
       alignSelf: 'flex-end',
     });
+    const customTextButton = (
+      <Icon.Button name="facebook" backgroundColor="#3b5998">
+      <Text style={{fontFamily: 'Arial', fontSize: 15}}>Login with Facebook</Text>
+      </Icon.Button>
+)   ;
     const TutorTabs = TabNavigator({
       Tutor: {
         screen: Tutor,
