@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { List, ListItem } from 'react-native-elements';
+
 
 export default class Chat extends Component {
   render() {
