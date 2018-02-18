@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { SearchBar } from 'react-native-elements';
 import { List, ListItem } from 'react-native-elements';
-import Search from './Search.js';
+//import Search from './Search.js';
 
 
 
@@ -21,7 +21,7 @@ export default class Chat extends Component {
          // onChangeText={meme()}
          // onClearText={meme()}
           placeholder='Type Here...' />
-          <Search />
+          
       </View>
     );
   }
