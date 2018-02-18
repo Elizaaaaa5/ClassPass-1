@@ -6,6 +6,7 @@ import Chat from './components/Chat.js';
 import Profile from './components/Profile.js';
 import Tutor from './components/Tutor.js';
 import Tutee from './components/Tutee.js';
+import ExploreIcon from './components/common/ExploreIcon.js';
 
 export default class App extends Component {
   render() {
@@ -21,11 +22,6 @@ export default class App extends Component {
       backgroundColor: props.activeTintColor,
       alignSelf: 'flex-end',
     });
-    const customTextButton = (
-      <Icon.Button name="facebook" backgroundColor="#3b5998">
-      <Text style={{fontFamily: 'Arial', fontSize: 15}}>Login with Facebook</Text>
-      </Icon.Button>
-)   ;
     const TutorTabs = TabNavigator({
       Tutor: {
         screen: Tutor,
@@ -53,22 +49,27 @@ export default class App extends Component {
     });
     
     const MainNavigator = TabNavigator({
-      Explore: { screen: Explore},
-      Chat:    { screen: Chat},
-      Profile: { screen: Profile},
-    }, {
+      Explore: { 
+        screen: Explore,
+        tabBarOptions: {
+          showLabel: false,
+          tabBarIcon: ExploreIcon,
+          showIcon: true,
+        }
+      },
+      Chat:    { 
+        screen: Chat
+      },
+      Profile: {
+        screen: Profile},
+      }, {
       tabBarOptions: {
         style: {
-          backgroundColor: '#1a1a1c',
+          backgroundColor: '#fff',
         }
       }
     });
     return (
-//      <View style={styles.container}>
-//        <Text>Welcome to ClassPass!</Text>
-//        <Text>Changes you make will automatically reload.</Text>
-//        <Text>Shake your phone to open the developer menu.</Text>
-//      </View>
         <MainNavigator />  
     );
   }
