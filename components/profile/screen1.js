@@ -6,6 +6,7 @@ import {
 import { Button } from 'react-native-elements'
 import { Font } from 'expo';
 import { LinearGradient } from 'expo';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
@@ -37,7 +38,7 @@ class CustomButton extends Component {
       <Button
         text={title}
         textStyle={{ fontSize: 15, color: 'white', fontFamily: 'regular' }}
-        buttonStyle={selected ? { backgroundColor: 'rgba(108, 108, 108, 1)', borderRadius: 100, width: 127 } : { borderWidth: 1, borderColor: 'white', borderRadius: 30, width: 127, backgroundColor: 'transparent' }}
+        buttonStyle={selected ? { backgroundColor: '#6c6c6c', borderRadius: 100, width: 127 } : { borderWidth: 1, borderColor: 'white', borderRadius: 30, width: 127, backgroundColor: 'transparent' }}
         containerStyle={{ marginRight: 10 }}
         onPress={() => this.setState({ selected: !selected })}
       />
@@ -72,7 +73,8 @@ export default class LoginScreen1 extends Component {
           barStyle="light-content"
         />
         { this.state.fontLoaded ?
-          <View style={{flex: 1, backgroundColor: 'rgba(26, 26, 28, 1)'}}>
+          <View style={{flex: 1, backgroundColor: 'black'}}>
+
             <View style={styles.statusBar} />
             <View style={styles.navBar}>
               <Text style={styles.nameHeader}>
@@ -99,7 +101,7 @@ export default class LoginScreen1 extends Component {
                 </Text>
               </View>
               <View style={{flex: 1, marginTop: 30}}>
-                <Text style={{flex: 1, fontSize: 15, color: 'rgba(216, 121, 112, 1)', fontFamily: 'regular', marginLeft: 40}}>
+                <Text style={{flex: 1, fontSize: 15, color: '#ffffff', fontFamily: 'regular', marginLeft: 40}}>
                   TUTOR COURSES
                 </Text>
                 <View style={{flex: 1, width: SCREEN_WIDTH, marginTop: 20}}>
@@ -110,9 +112,10 @@ export default class LoginScreen1 extends Component {
                   >
                     <View style={{flex: 1, flexDirection: 'column', height: 170, marginLeft: 40, marginRight: 10}}>
                       <View style={{flex: 1, flexDirection: 'row'}}>
-
-                        <Button title="CS2150" />
-                        <Button title="CS4753" />
+                        <Button title="CS2150" buttonStyle={{
+                            backgroundColor: "#1a1a1c"}} />
+                        <Button title="CS4753" buttonStyle={{
+                            backgroundColor: "#1a1a1c"}}/>
                       </View>
                     </View>
                   </ScrollView>
@@ -141,17 +144,17 @@ const styles = StyleSheet.create({
     fontSize: 22,
     textAlign: 'center'
   },
-  infoTypeLabel: {
-    fontSize: 15,
-    textAlign: 'right',
-    color: 'rgba(255,0,0,0.3)',
-    fontFamily: 'regular',
-    paddingBottom: 10,
-  },
-  infoAnswerLabel: {
-    fontSize: 15,
-    color: 'white',
-    fontFamily: 'regular',
-    paddingBottom: 10,
-  }
+  // infoTypeLabel: {
+  //   fontSize: 15,
+  //   textAlign: 'right',
+  //   color: 'rgba(255,0,0,0.3)',
+  //   fontFamily: 'regular',
+  //   paddingBottom: 10,
+  // },
+  // infoAnswerLabel: {
+  //   fontSize: 15,
+  //   color: 'white',
+  //   fontFamily: 'regular',
+  //   paddingBottom: 10,
+  // }
 });
