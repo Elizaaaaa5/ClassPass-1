@@ -17,8 +17,8 @@ export default class Chat extends Component {
     return (
       <View style={styles.container}>
         <SearchBar
-          onChangeText={meme}
-          onClearText={meme}
+          onChangeText={meme()}
+          onClearText={meme()}
           placeholder='Type Here...' />
       </View>
     );
