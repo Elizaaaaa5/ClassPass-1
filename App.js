@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator, TabNavigator, TabBarTop } from 'react-navigation';
-//import Explore from './components/Explore.js';
+import Explore from './components/Explore.js';
 import Chat from './components/Chat.js';
 import Profile from './components/Profile.js';
 import Tutor from './components/Tutor.js';
@@ -11,11 +11,12 @@ import Tutee from './components/Tutee.js';
 export default class App extends Component {
   render() {
     const exploreTabs =(props, alignSelf, marginTop)=> ({
-      fontSize: 13,
+      fontSize: 16,
       fontWeight: '600',
       marginHorizontal: 15,
       marginTop,
-      alignSelf
+      alignSelf,
+      color: '#fff',
     });
     const indication =(props,alignSelf)=> ({
       backgroundColor: props.activeTintColor,
@@ -25,13 +26,13 @@ export default class App extends Component {
       Tutor: {
         screen: Tutor,
         navigationOptions:{
-          tabBarLabel: (props)=>(<Text style={exploreTabs(props, 'flex-end',30)}> Tutor</Text>)
+          tabBarLabel: (props)=>(<Text style={exploreTabs(props, 'flex-end',20)}> Tutor</Text>)
         },
       },
       Tutee: {
         screen: Tutee,
         navigationOptions:{
-          tabBarLabel: (props)=>(<Text style={exploreTabs(props, 'flex-start',30)}> Tutee</Text>)
+          tabBarLabel: (props)=>(<Text style={exploreTabs(props, 'flex-start',20)}> Tutee</Text>)
         },
       },
     }, {
@@ -41,13 +42,14 @@ export default class App extends Component {
       tabBarOptions: {
         activeTintColor: '#fff',
         style: {
-          backgroundColor: '#fff',
+          marginTop: 20,
+          backgroundColor: '#1a1a1c',
         },
       }
     });
     
     const MainNavigator = TabNavigator({
-      Explore: { screen: TutorTabs},
+      Explore: { screen: Explore},
       Chat:    { screen: Chat},
       Profile: { screen: Profile},
     }, {

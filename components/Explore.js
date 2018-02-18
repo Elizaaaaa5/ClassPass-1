@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator, TabNavigator, TabBarTop } from 'react-navigation';
-import { SearchBar } from 'react-native-elements';
 import Tutor from './Tutor.js';
 import Tutee from './Tutee.js';
+import Search from './Search.js';
 
 export default class Explore extends Component {
   render() {
     const exploreTabs =(props, alignSelf, marginTop)=> ({
-      fontSize: 13,
+      fontSize: 16,
       fontWeight: '600',
       marginHorizontal: 15,
       marginTop,
-      alignSelf
+      alignSelf,
+      color: '#fff',
     });
     const indication =(props,alignSelf)=> ({
       backgroundColor: props.activeTintColor,
@@ -22,13 +23,13 @@ export default class Explore extends Component {
       Tutor: {
         screen: Tutor,
         navigationOptions:{
-          tabBarLabel: (props)=>(<Text style={exploreTabs(props, 'flex-end',30)}> Tutor</Text>)
+          tabBarLabel: (props)=>(<Text style={exploreTabs(props, 'flex-end',20)}> Tutor</Text>)
         },
       },
       Tutee: {
         screen: Tutee,
         navigationOptions:{
-          tabBarLabel: (props)=>(<Text style={exploreTabs(props, 'flex-start',30)}> Tutee</Text>)
+          tabBarLabel: (props)=>(<Text style={exploreTabs(props, 'flex-start',20)}> Tutee</Text>)
         },
       },
     }, {
@@ -38,17 +39,20 @@ export default class Explore extends Component {
       tabBarOptions: {
         activeTintColor: '#fff',
         style: {
-          backgroundColor: '#fff',
+          //marginTop: 20,
+          backgroundColor: '#000',
         },
       }
     });
-
+     
+    const ExploreNav = StackNavigator({
+      StackOne: { screen: TutorTabs },
+      StackTwo: { screen: Search },
+    });
     return (
-      <View style={styles.container}>
-        <Text>hello </Text>
-        <Text>bitch </Text>
-        <Text>! </Text>
-      </View>
+      //<View style={styles.container}>
+        <ExploreNav />
+      //</View>
     );
   }
 }

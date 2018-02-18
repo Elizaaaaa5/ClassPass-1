@@ -5,7 +5,7 @@ import { List, ListItem } from 'react-native-elements'
 export default class ExploreCard extends Component {
   render () {
     return (
-      <View>
+      <View style={styles.card}>
           <List>
             <ListItem
               roundAvatar
@@ -79,5 +79,8 @@ styles = StyleSheet.create({
   ratingText: {
     paddingLeft: 10,
     color: 'grey'
+  },
+  card: {
+    //backgroundColor: '#1a1a1c',
   }
 })
