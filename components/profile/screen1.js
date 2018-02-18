@@ -82,7 +82,7 @@ export default class LoginScreen1 extends Component {
             <ScrollView style={{flex: 1}}>
               <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                 <Image
-                  source={{ uri: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/15781017_1720121041636779_617057350366501204_n.jpg?oh=2d3d47e9c6b481fe1ba7c490f082127d&oe=5B029FCB' }}
+                  source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg/1200px-South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg' }}
                   style={{ width: IMAGE_SIZE, height: IMAGE_SIZE, borderRadius: 10}}
                 />
               </View>
